@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="#151513" name="theme-color"/>
+<meta content="Gastrobar Gato Negro en Bétera. Gastronomía, tapas, arroces y momentos para compartir." name="description"/>
+<title>Gato Negro | Gastrobar Bétera</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- Redirigir los enlaces de recuperación antes de inicializar la sesión normal. -->
+<script>
+(() => {
+  const h = new URLSearchParams(location.hash.slice(1));
+  const q = new URLSearchParams(location.search);
+  if (h.get('type') === 'recovery' || h.has('error_code') || q.has('error_code') || h.has('error') || q.has('error')) {
+    location.replace('recovery.html' + location.search + location.hash);
+  }
+})();
+</script>
+<script defer="" src="experience.js"></script>
+<!-- CONEXIÓN CON SUPABASE -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer="" src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script defer="" src="supabase.js"></script>
+<script defer="" src="app.js"></script>
+<script defer src="account.js"></script>
+<script defer src="admin-ui.js"></script>
+</head>
+<body>
+<a class="skip" href="#inicio">Saltar al contenido</a>
+<!-- CABECERA -->
+<header>
+<a class="brand" href="#inicio">
+            GATO<span>NEGRO</span>
+</a>
+<button aria-controls="mainNav" aria-expanded="false" class="nav-toggle" hidden="" type="button">Menú ☰</button>
+<nav aria-label="Navegación principal" id="mainNav">
+<a href="#inicio">Inicio</a>
+<a href="carta.html">Carta</a>
+<a href="#reservas">Reservas</a>
+<a href="#galeria">Galería</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/gatonegro_gastrobar/?hl=es" rel="noopener noreferrer" target="_blank">Instagram ↗</a>
+</nav>
+</header>
+<main id="inicio">
+<!-- PORTADA -->
+<section class="hero">
+<div aria-hidden="true" class="orb">✦</div><div aria-hidden="true" class="hero-photo"></div>
+<small>GASTROBAR · BÉTERA</small>
+<h1>
+                El placer de<br/>
+<em>compartir.</em>
+</h1>
+<p>
+                Una manera diferente de disfrutar la mesa.
+                Sabores para descubrir y momentos para recordar.
+            </p>
+<a class="button" href="carta.html">
+                Descubrir la carta
+            </a>
+<a class="outline" href="#reservas">
+                Reservar mesa
+            </a>
+</section>
+<section class="intro" id="nosotros"><small>01 / NUESTRA ESENCIA</small><h2>La mesa, nuestro punto de encuentro.</h2><p>Una propuesta para disfrutar sin prisas, descubrir sabores y compartir buenos momentos en Bétera.</p></section>
+<!-- GASTRONOMÍA -->
+<section id="carta">
+<small>01 / GASTRONOMÍA</small>
+<h2>Sabores con personalidad.</h2>
+<p>
+                Descubre nuestra propuesta gastronómica.
+                Tapas, arroces, carnes, pescados y menús
+                para disfrutar en buena compañía.
+            </p>
+<div class="dish-grid"><div class="dish-card">
+<h3>Para compartir</h3>
+<p>
+                    Tapas, ensaladas, croquetas y una selección
+                    de platos para disfrutar alrededor de la mesa.
+                </p>
+</div>
+<div class="dish-card">
+<h3>Nuestros menús</h3>
+<p>
+                    Menús de mediodía, tapas, noches,
+                    grupos y fines de semana.
+                </p>
+</div>
+</div>
+<a class="button" href="carta.html">
+                Ver carta completa →
+            </a>
+<p>
+<small>
+                    Precios y disponibilidad pendientes
+                    de confirmación por el restaurante.
+                </small>
+</p>
+</section>
+<section id="galeria"><small>03 / INSPIRACIÓN</small><h2>Momentos alrededor de la mesa.</h2><p>Una selección de fotografías aportadas para esta presentación.</p><div class="gallery"><figure class="photo-card"><button aria-label="Ampliar: Barra del restaurante" class="photo-open" data-photo="images/local.webp" type="button"><img alt="Barra del restaurante" decoding="async" height="580" loading="lazy" src="images/local.webp" width="915"/><span>Barra del restaurante ↗</span></button></figure><figure class="photo-card"><button aria-label="Ampliar: Fideuà con gambas" class="photo-open" data-photo="images/fideua.webp" type="button"><img alt="Fideuà con gambas" decoding="async" height="775" loading="lazy" src="images/fideua.webp" width="899"/><span>Fideuà con gambas ↗</span></button></figure><figure class="photo-card"><button aria-label="Ampliar: Ensaladilla con tostas" class="photo-open" data-photo="images/tapas.webp" type="button"><img alt="Ensaladilla con tostas" decoding="async" height="885" loading="lazy" src="images/tapas.webp" width="916"/><span>Ensaladilla con tostas ↗</span></button></figure><figure class="photo-card"><button aria-label="Ampliar: Carne con patatas y pimientos" class="photo-open" data-photo="images/carne.webp" type="button"><img alt="Carne con patatas y pimientos" decoding="async" height="855" loading="lazy" src="images/carne.webp" width="916"/><span>Carne con patatas y pimientos ↗</span></button></figure><figure class="photo-card"><button aria-label="Ampliar: Postre con frutos rojos" class="photo-open" data-photo="images/postre.webp" type="button"><img alt="Postre con frutos rojos" decoding="async" height="900" loading="lazy" src="images/postre.webp" width="911"/><span>Postre con frutos rojos ↗</span></button></figure></div></section><section id="grupos"><small>04 / EN COMPAÑÍA</small><h2>Celebrar sabe mejor.</h2><p>Consulta los menús de grupos y fines de semana en nuestra carta de demostración.</p><a class="button" href="carta.html#menus">Ver menús</a></section>
+<!-- RESERVAS -->
+<section id="reservas">
+<small>02 / TU MESA</small>
+<h2>Un momento para disfrutar.</h2>
+<p>
+                Tu próxima experiencia empieza aquí.
+            </p>
+<p>
+                Sistema de demostración.
+                No se realizan reservas reales.
+                Utiliza datos ficticios.
+            </p>
+<form id="booking">
+<label>
+                    Nombre completo
+                    <input maxlength="80" name="nombre" placeholder="Nombre y apellidos" required="" type="text"/>
+</label>
+<label>
+                    Teléfono
+                    <input maxlength="20" name="telefono" placeholder="Teléfono de prueba" required="" type="tel"/>
+</label>
+<label>
+                    Correo electrónico
+                    <input maxlength="120" name="email" placeholder="correo@ejemplo.com" required="" type="email"/>
+</label>
+<label>
+                    Fecha
+                    <input name="fecha" required="" type="date"/>
+</label>
+<label>
+                    Hora
+                    <input name="hora" required="" type="time"/>
+</label>
+<label>
+                    Número de personas
+                    <input max="12" min="1" name="personas" required="" type="number" value="2"/>
+</label>
+<!-- Cloudflare Turnstile: protección antispam -->
+<div class="turnstile-container">
+<div id="turnstile-widget"></div>
+<small aria-live="polite" id="turnstile-status" role="status">
+                        Verificación de seguridad necesaria para enviar la solicitud.
+                    </small>
+</div>
+<button type="submit">
+                    Solicitar reserva
+                </button>
+<output aria-live="polite" id="result" role="status">
+</output>
+</form>
+</section>
+<section id="preguntas"><small>06 / INFORMACIÓN</small><h2>Preguntas frecuentes.</h2><details><summary>¿Cómo funciona la reserva?</summary><p>En esta demo puedes enviar una solicitud ficticia. No constituye una reserva real.</p></details><details><summary>¿Dónde consulto los alérgenos?</summary><p>Consulta la información de la carta y confirma cualquier alergia directamente con el restaurante.</p></details><details><summary>¿Hay menús para grupos?</summary><p>La carta incluye propuestas de menús. Confirma disponibilidad y precios con el establecimiento.</p></details></section><section id="instagram"><small>07 / EN REDES</small><h2>Nos vemos en Instagram.</h2><p>Descubre las publicaciones del gastrobar en su perfil oficial.</p><a class="button" href="https://www.instagram.com/gatonegro_gastrobar/?hl=es" rel="noopener noreferrer" target="_blank">@gatonegro_gastrobar ↗</a></section>
+<!-- CONTACTO -->
+<section id="contacto">
+<small>03 / ENCUÉNTRANOS</small>
+<h2>Nos vemos en Bétera.</h2>
+<p>Gastrobar Gato Negro</p>
+<p>Bétera · Valencia</p>
+<a class="outline" href="https://www.google.com/maps/search/?api=1&amp;query=Gastrobar+Gato+Negro+Betera" rel="noopener noreferrer" target="_blank">
+                Cómo llegar ↗
+            </a>
+<a class="outline" href="carta.html">
+                Consultar carta
+            </a> <a href="https://www.instagram.com/gatonegro_gastrobar/?hl=es" rel="noopener noreferrer" target="_blank">Instagram ↗</a>
+</section>
+</main>
+<!-- PIE DE PÁGINA -->
+<footer>
+<p>GATO NEGRO · GASTROBAR</p>
+<small>Bétera · Valencia</small>
+<p>
+<a href="#inicio">Inicio</a> ·
+            <a href="carta.html">Carta</a> ·
+            <a href="#reservas">Reservas</a> ·
+            <a href="#contacto">Contacto</a>
+</p>
+<small>
+            Propuesta no oficial · Sin reservas reales · Fotografías ilustrativas
+        </small>
+<a href="https://www.instagram.com/gatonegro_gastrobar/?hl=es" rel="noopener noreferrer" target="_blank">Instagram ↗</a>
+<!-- ACCESO DISCRETO AL ADMINISTRADOR -->
+<button hidden="" id="adminOpen" type="button">
+            Administración
+        </button>
+</footer>
+<!-- INICIO DE SESIÓN DEL ADMINISTRADOR -->
+<dialog aria-labelledby="loginTitle" id="adminLogin">
+<small>GATO NEGRO · ADMINISTRACIÓN</small>
+<h2 id="loginTitle">
+            Acceso privado
+        </h2>
+<p>
+            Introduce tu contraseña para acceder
+            al panel de administración.
+        </p>
+<form id="loginForm">
+<label>
+                Contraseña
+                <input autocomplete="current-password" id="adminPassword" name="password" placeholder="Introduce tu contraseña" required="" type="password"/>
+</label>
+<button id="loginButton" type="submit">
+                Iniciar sesión
+            </button>
+<output aria-live="polite" id="loginResult" role="status">
+</output>
+</form>
+<div class="support-box"><strong>¿Has olvidado tu contraseña?</strong><p>Contacta con soporte técnico para recuperar el acceso.</p><a class="outline support-link" href="https://wa.me/34607323284?text=Hola%2C%20necesito%20ayuda%20para%20recuperar%20el%20acceso%20al%20panel%20de%20administraci%C3%B3n%20de%20Gato%20Negro%20Gastrobar." target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a></div>
+<button class="outline" id="closeLogin" type="button">
+            Cancelar
+        </button>
+</dialog>
+<!-- PANEL DE ADMINISTRACIÓN -->
+<dialog aria-labelledby="adminTitle" id="admin">
+<div class="admin-shell"><aside class="admin-sidebar"><div class="admin-brand"><small>GATO NEGRO</small><strong>Gestión interna</strong></div>
+<div class="admin-nav" aria-label="Apartados de administración">
+<button type="button" data-admin-tab="overview" aria-pressed="true">Resumen</button><button type="button" data-admin-tab="reservations" aria-pressed="false">Reservas</button><button type="button" data-admin-tab="menu" aria-pressed="false">Carta</button><button type="button" data-admin-tab="security" aria-pressed="false">Seguridad</button></div>
+<div class="admin-exit"><button id="close" type="button" class="outline">Volver a la web</button><button id="logout" type="button" class="outline">Cerrar sesión</button></div></aside>
+<div class="admin-main"><div class="admin-heading"><small>ÁREA PRIVADA</small><h2 id="adminTitle">Panel de administración</h2><p>Demostración · No introducir datos reales.</p><p aria-live="polite" id="sessionStatus"></p></div>
+<div data-admin-panel="overview"><h3>Resumen de actividad</h3><p>Consulta las cifras de tu restaurante.</p><div id="adminStats"></div><div class="admin-shortcuts"><button type="button" data-admin-go="reservations">Gestionar reservas</button><button type="button" data-admin-go="menu">Gestionar carta</button></div></div>
+<div data-admin-panel="reservations" hidden><h3>Reservas simuladas</h3><p>Consulta y gestiona las solicitudes.</p><div class="admin-filters"><label>Buscar reserva<input id="bookingSearch" type="search" placeholder="Nombre, fecha, teléfono…"></label><label>Estado<select id="bookingFilter"><option value="">Todos</option><option>Pendiente</option><option>Confirmada</option><option>Rechazada</option><option>Cancelada</option></select></label></div><p id="bookingCount" aria-live="polite"></p><div id="bookings"></div></div>
+<div data-admin-panel="menu" hidden><h3>Gestión de carta</h3><p>Los cambios guardados se reflejan en la carta pública al actualizarla.</p><details class="admin-add"><summary>Añadir un plato</summary><form id="dishForm">
+<label>
+                Nombre del plato
+                <input maxlength="120" name="plato" required=""/>
+</label>
+<label>
+                Categoría
+<select name="categoria" required=""><option value="tapas">Tapas</option><option value="ensaladas">Ensaladas</option><option value="croquetas">Croquetas</option><option value="menus">Menús</option></select>
+</label>
+<label>
+                Precio opcional (€)
+                <input min="0" name="precio" step="0.01" type="number"/>
+</label>
+<label>Descripción<textarea name="descripcion" rows="4"></textarea></label>
+<label>Unidad de precio<input name="unidad" placeholder="/ persona"/></label>
+<label>Etiqueta<input name="etiqueta"/></label>
+<label><input name="ocultar" type="checkbox"/> Ocultar precio</label>
+<label><input name="destacado" type="checkbox"/> Destacar plato</label>
+<label><input checked="" name="disponible" type="checkbox"/> Disponible</label>
+<button type="submit">
+                Añadir plato
+            </button>
+</form>
+</details><p id="dishStatus" role="status"></p><div class="admin-filters"><label>Buscar plato<input id="dishSearch" type="search" placeholder="Nombre del plato"></label><label>Categoría<select id="dishFilter"><option value="">Todas</option><option value="tapas">Tapas</option><option value="ensaladas">Ensaladas</option><option value="croquetas">Croquetas</option><option value="menus">Menús</option></select></label></div><p id="dishCount" aria-live="polite"></p><div id="manage"></div></div>
+<div data-admin-panel="security" hidden><h3>Seguridad y configuración</h3><p>Gestiona tu contraseña de acceso.</p><div class="account-settings" id="accountSettings"><form id="passwordChange"><label>Contraseña actual<input type="password" id="currentPassword" autocomplete="current-password" required></label><label>Nueva contraseña<input type="password" id="newPassword" autocomplete="new-password" minlength="12" maxlength="128" required></label><meter id="passwordStrength" min="0" max="4" value="0" aria-label="Fortaleza orientativa"></meter><p id="strengthText">Mínimo 12 caracteres.</p><label>Confirmar nueva contraseña<input type="password" id="confirmPassword" autocomplete="new-password" required></label><button type="submit">Cambiar contraseña</button><p id="passwordStatus" role="status"></p></form></div><div class="support-box"><strong>Soporte técnico</strong><p>¿Necesitas ayuda con tu cuenta?</p><a class="outline support-link" href="https://wa.me/34607323284?text=Hola%2C%20necesito%20ayuda%20para%20recuperar%20el%20acceso%20al%20panel%20de%20administraci%C3%B3n%20de%20Gato%20Negro%20Gastrobar." target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a></div></div></div></div>
+</dialog>
+<dialog aria-label="Fotografía ampliada" id="photoDialog"><button class="outline" id="photoClose" type="button">Cerrar ×</button><img alt="" id="photoLarge"/><p>Fotografía de la galería</p></dialog>
+</body>
+</html>

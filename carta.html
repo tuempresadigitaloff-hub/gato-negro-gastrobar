@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#141412">
+
+    <title>La Carta | Gastrobar Gato Negro</title>
+
+    <link rel="stylesheet" href="carta.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="description" content="Carta de demostración de Gato Negro Gastrobar en Bétera: tapas y menús.">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script><script src="supabase.js" defer></script><script src="carta.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="brand">
+        <span class="brand-name">GATO NEGRO</span>
+        <span class="brand-subtitle">GASTROBAR · BÉTERA</span>
+    </a>
+
+    <a href="index.html" class="back-button">
+        ← Volver al inicio
+    </a>
+</header>
+
+<main id="contenido">
+
+<section class="menu-hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <span class="eyebrow">GATO NEGRO · GASTRONOMÍA</span>
+
+        <h1>El placer de compartir<span>.</span></h1>
+
+        <div class="gold-line"></div>
+
+        <p>Sabores para descubrir. Momentos para recordar.</p>
+
+        <a href="#carta" class="explore-button">
+            Descubrir nuestra carta ↓
+        </a>
+    </div>
+</section>
+
+<section class="menu-intro">
+    <span class="eyebrow">NUESTRA PROPUESTA</span>
+
+    <h2>Una manera diferente de disfrutar la mesa</h2>
+
+    <p>Tapas, arroces, carnes, pescados y menús para compartir.</p>
+</section>
+
+<section class="menu-section" id="carta">
+
+    <div class="section-heading">
+        <span class="eyebrow">GASTRONOMÍA</span>
+        <h2>Nuestra carta</h2>
+    </div>
+
+    <div class="menu-controls">
+
+        <div class="search-container">
+            <label for="searchInput">Buscar platos o menús</label>
+
+            <input type="search"
+                   id="searchInput"
+                   placeholder="¿Qué te apetece hoy?">
+        </div>
+
+        <nav class="category-navigation" aria-label="Categorías">
+
+            <button class="category-button active"
+                    data-category="todos"
+                    aria-pressed="true">Todo</button>
+
+            <button class="category-button"
+                    data-category="tapas"
+                    aria-pressed="false">Tapeo</button>
+
+            <button class="category-button"
+                    data-category="ensaladas"
+                    aria-pressed="false">Ensaladas</button>
+
+            <button class="category-button"
+                    data-category="croquetas"
+                    aria-pressed="false">Croquetas</button>
+
+            <button class="category-button"
+                    data-category="menus"
+                    aria-pressed="false">Menús</button>
+
+        </nav>
+
+    </div>
+
+    <div class="menu-results">
+        <p id="resultsCount" aria-live="polite"></p>
+
+        <button id="allergenButton" class="allergen-button">
+            Información sobre alérgenos
+        </button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+
+        <!-- CARTA DE TAPEO -->
+
+        <section class="menu-category" id="tapeo">
+
+            <span class="eyebrow">PARA COMPARTIR</span>
+            <h2>Carta de tapeo</h2>
+
+            <article class="menu-item" data-category="ensaladas">
+                <div class="dish-info">
+                    <h3>Ensalada de pollo crujiente</h3>
+                    <p>Salsa de miel y mostaza con cebolla crujiente.</p>
+                </div>
+                <span class="price">14 €</span>
+            </article>
+
+            <article class="menu-item" data-category="ensaladas">
+                <div class="dish-info">
+                    <h3>Tomate de temporada con ventresca de atún</h3>
+                    <p>Perlas de mozzarella y pesto.</p>
+                </div>
+                <span class="price">15 €</span>
+            </article>
+
+            <article class="menu-item featured" data-category="tapas">
+                <div class="dish-info">
+                    <h3><strong>Tabla de ibéricos con queso semicurado</strong></h3>
+                </div>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Ensaladilla casera de pulpo y gamba</h3>
+                </div>
+                <span class="price">12 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Crujiente de pollo al curry</h3>
+                    <p>Con verduritas.</p>
+                </div>
+                <span class="price">4,50 € / ud.</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Ajoarriero casero</h3>
+                    <p>Con tostas y pimentón de la Vera.</p>
+                </div>
+                <span class="price">9 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Revuelto de setas con boletus</h3>
+                    <p>Con jamón y tostas.</p>
+                </div>
+                <span class="price">14 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Nuestras bravas</h3>
+                    <p>Con nuestra salsa.</p>
+                </div>
+                <span class="price">6,50 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Tellinas a la plancha</h3>
+                    <p>Con salsa meri.</p>
+                </div>
+                <span class="price">12 €</span>
+            </article>
+
+            <article class="menu-item featured" data-category="tapas">
+                <div class="dish-info">
+                    <h3><strong>Brochetas de pollo yakitori</strong></h3>
+                    <p>Con salsa teriyaki. 2 unidades.</p>
+                </div>
+            </article>
+
+            <article class="menu-item" data-category="croquetas">
+                <div class="dish-info">
+                    <h3>Croquetas de jamón ibérico</h3>
+                    <p>4 unidades.</p>
+                </div>
+                <span class="price">10 €</span>
+            </article>
+
+            <article class="menu-item" data-category="croquetas">
+                <div class="dish-info">
+                    <h3>Croquetas de rabo de toro</h3>
+                    <p>4 unidades.</p>
+                </div>
+                <span class="price">10 €</span>
+            </article>
+
+            <article class="menu-item" data-category="croquetas">
+                <div class="dish-info">
+                    <h3>Croquetas caseras de queso de cabra</h3>
+                    <p>Con cebolla caramelizada. 4 unidades.</p>
+                </div>
+                <span class="price">10 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Huevos rotos con jamón</h3>
+                </div>
+                <span class="price">14 €</span>
+            </article>
+
+            <article class="menu-item" data-category="tapas">
+                <div class="dish-info">
+                    <h3>Rabas de calamar a la andaluza</h3>
+                </div>
+                <span class="price">10 €</span>
+            </article>
+
+        </section>
+
+        <!-- MENÚS -->
+
+        <section class="menu-category" id="menus">
+
+            <span class="eyebrow">EXPERIENCIAS GASTRONÓMICAS</span>
+            <h2>Nuestros menús</h2>
+
+            <!-- MENÚ MEDIODÍA -->
+
+            <article class="menu-card menu-item" data-category="menus">
+
+                <div class="menu-card-header">
+                    <span class="menu-tag">MEDIODÍA</span>
+                    <h3>Menú mediodía</h3>
+                    <div class="menu-price">19 € <small>/ persona</small></div>
+                </div>
+
+                <details class="menu-details">
+
+                    <summary>Ver menú completo</summary>
+
+                    <h4>Aperitivo de la casa</h4>
+
+                    <h4>Entrantes · 2 a compartir</h4>
+
+                    <ul>
+                        <li>Ensalada César con pollo, picatostes y parmesano</li>
+                        <li>Tomate de temporada con ventresca de atún y encurtidos del sur</li>
+                        <li>Surtido de ibéricos con queso manchego semicurado</li>
+                        <li>Ajoarriero con tostas y pimentón de la Vera</li>
+                        <li>Crujiente de cremoso de gamba con verduritas</li>
+                        <li>Cazuelita de queso provolone con orégano y tostas</li>
+                        <li>Cazuelita de piquillos rellenos de bacalao</li>
+                        <li>Morcilla de Burgos con calabacín y tostas</li>
+                        <li>Rabas de calamar a la andaluza</li>
+                        <li>Nuestras bravas con nuestra salsa</li>
+                        <li>Huevos rotos con jamón (+2 €)</li>
+                        <li>Croquetas caseras de manchego y membrillo</li>
+                        <li>Croquetas caseras de secreto barbacoa</li>
+                    </ul>
+
+                    <h4>Arroces y principales</h4>
+
+                    <ul>
+                        <li>Fideuà</li>
+                        <li>Rossejat (fideuà negra)</li>
+                        <li>Arroz a banda</li>
+                        <li>Arroz del senyoret (+4 € por ración)</li>
+                        <li>Arroz negro</li>
+                        <li>Arroz de bacalao y trigueros</li>
+                        <li>Arroz de pulpo y trigueros (+4 € por ración)</li>
+                        <li><strong>Arroz de carabinero</strong> (+9 € por ración)</li>
+                        <li>Arroz meloso marinero</li>
+                        <li>Arroz de pato, setas y alcachofas</li>
+                        <li>Arroz meloso de pato, setas y alcachofas</li>
+                        <li>Arroz de secreto, boletus y garbanzos</li>
+                        <li>Solomillo de cerdo a la plancha con guarnición</li>
+                        <li>Carrillera con salsa de foie y guarnición</li>
+                        <li>Salmón al horno con verduritas y parmesano</li>
+                        <li>Emperador a la plancha con salsa meri</li>
+                    </ul>
+
+                    <h4>Postres</h4>
+
+                    <ul>
+                        <li>Chocolate en texturas casero</li>
+                        <li>Mousse de mango con frutos rojos casero</li>
+                        <li>Textura de Lotus casera</li>
+                        <li>Milhojas de pistacho y galleta casero</li>
+                        <li>Fruta natural</li>
+                    </ul>
+
+                    <p class="menu-includes">
+                        Incluye pan, postre y café.
+                    </p>
+
+                    <p class="menu-note">
+                        Arroces para un mínimo de dos personas.
+                        Máximo dos tipos de arroz y un meloso por mesa.
+                    </p>
+
+                </details>
+
+            </article>
+
+            <!-- MENÚ TAPAS -->
+
+            <article class="menu-card menu-item" data-category="menus">
+
+                <div class="menu-card-header">
+                    <span class="menu-tag">PARA COMPARTIR</span>
+                    <h3>Menú tapas</h3>
+                    <div class="menu-price">23 € <small>/ persona</small></div>
+                </div>
+
+                <details class="menu-details">
+
+                    <summary>Ver menú completo</summary>
+
+                    <ul>
+                        <li>Carpaccio de lomo a baja temperatura con salsa ranchera y cebolla crujiente</li>
+                        <li>Selección de ibéricos con queso</li>
+                        <li>Crujiente de cremoso de gamba con verduritas</li>
+                        <li>Nuestras bravas con nuestra salsa</li>
+                        <li>Croquetas caseras de manchego y membrillo</li>
+                    </ul>
+
+                    <p class="menu-includes">
+                        Incluye pan, alioli, tomate rallado, postre y café.
+                    </p>
+
+                    <p class="menu-note">
+                        Menú para mesa completa. Mínimo dos personas.
+                        Solo se admite un cambio por mesa.
+                    </p>
+
+                    <p class="menu-note">
+                        Disponible para llevar.
+                        Servicio extra de cubiertos y plato: 5 €.
+                    </p>
+
+                </details>
+
+            </article>
+
+            <!-- MENÚ GRUPO A -->
+
+            <article class="menu-card menu-item" data-category="menus">
+
+                <div class="menu-card-header">
+                    <span class="menu-tag">GRUPOS</span>
+                    <h3>Menú grupo A</h3>
+                    <div class="menu-price">24 € <small>/ persona</small></div>
+                </div>
+
+                <details class="menu-details">
+
+                    <summary>Ver menú completo</summary>
+
+                    <h4>Entrantes</h4>
+
+                    <ul>
+                        <li>Ensaladilla de marisco con pulpo y gambas</li>
+                        <li>Ensalada de pollo crujiente con salsa de miel y mostaza</li>
+                        <li>Ajoarriero con tostas y pimentón de la Vera</li>
+                        <li>Cazuelita de queso provolone con orégano y tostas</li>
+                        <li>Crujiente de cremoso de pollo al curry con verduritas</li>
+                        <li>Rabas de calamar a la andaluza</li>
+                        <li>Tempura de verduras con mayonesa de lima</li>
+                        <li>Croquetas caseras de carrillera al Pedro Ximénez</li>
+                    </ul>
+
+                    <h4>Principales</h4>
+
+                    <ul>
+                        <li>Arroz a banda (solo mediodía)</li>
+                        <li>Arroz de pato, setas y alcachofas (solo mediodía)</li>
+                        <li>Carrillera de cerdo con salsa de foie</li>
+                        <li>Salmón al horno con verduritas y parmesano</li>
+                    </ul>
+
+                    <h4>Postres</h4>
+
+                    <ul>
+                        <li>Vasito de chocolate en texturas casero</li>
+                        <li>Mousse de limón casero</li>
+                    </ul>
+
+                    <p class="menu-note">
+                        Elegir tres entrantes iguales para compartir entre toda la mesa.
+                    </p>
+
+                    <p class="menu-note">
+                        Bebida durante la comida o cena:
+                        suplemento de 10 € por persona.
+                    </p>
+
+                </details>
+
+            </article>
+
+            <!-- MENÚ NOCHES -->
+
+            <article class="menu-card menu-item" data-category="menus">
+
+                <div class="menu-card-header">
+                    <span class="menu-tag">EXPERIENCIA NOCTURNA</span>
+                    <h3>Menú noches</h3>
+                    <div class="menu-price">25 € <small>/ persona</small></div>
+                </div>
+
+                <details class="menu-details">
+
+                    <summary>Ver menú completo</summary>
+
+                    <h4>Aperitivo de la casa</h4>
+
+                    <h4>Entrantes</h4>
+
+                    <ul>
+                        <li>Ensalada César con pollo, picatostes y parmesano</li>
+                        <li>Brocheta de pollo yakitori con salsa teriyaki</li>
+                        <li>Croquetas caseras de secreto barbacoa</li>
+                    </ul>
+
+                    <h4>Principal a compartir</h4>
+
+                    <ul>
+                        <li><strong>Entrecot con guarnición (350 g)</strong></li>
+                        <li>Costillar de cerdo con salsa barbacoa</li>
+                        <li>Bacalao gratinado con muselina de alioli</li>
+                        <li>Salmón al horno con verduritas y parmesano</li>
+                        <li><strong>Solomillo de atún a la plancha con salsa teriyaki</strong></li>
+                    </ul>
+
+                    <p class="menu-includes">
+                        Incluye pan, alioli, tomate, postre y café.
+                    </p>
+
+                    <p class="menu-note">
+                        Mínimo dos personas. Menú para mesa completa.
+                        Solo se admite un cambio por mesa.
+                    </p>
+
+                    <p class="menu-note">
+                        Disponible para llevar.
+                        Servicio extra de cubiertos y plato: 5 €.
+                    </p>
+
+                </details>
+
+            </article>
+
+            <!-- MENÚ FIN DE SEMANA -->
+
+            <article class="menu-card menu-item" data-category="menus">
+
+                <div class="menu-card-header">
+                    <span class="menu-tag">SÁBADOS Y DOMINGOS</span>
+                    <h3>Menú fin de semana</h3>
+                    <div class="menu-price">25 € <small>/ persona</small></div>
+                </div>
+
+                <details class="menu-details">
+
+                    <summary>Ver menú completo</summary>
+
+                    <h4>Aperitivo de la casa</h4>
+
+                    <h4>Entrantes · 2 a compartir</h4>
+
+                    <ul>
+                        <li>Ensaladilla de marisco con pulpo y gambas</li>
+                        <li>Ensalada de pollo crujiente con salsa de miel y mostaza</li>
+                        <li>Tomate de temporada con ventresca de atún y encurtidos del sur</li>
+                        <li>Surtido de ibéricos con queso semicurado</li>
+                        <li>Brochetas de magro especiado con parmentier de patata</li>
+                        <li>Cazuelita de queso provolone con orégano y tostas</li>
+                        <li>Tortellini gratinados de jamón con salsa de foie</li>
+                        <li>Revuelto de setas con boletus y tostas</li>
+                        <li>Rabas de calamar a la andaluza</li>
+                        <li>Nuestras bravas con nuestra salsa</li>
+                        <li>Huevos rotos con jamón (+3 €)</li>
+                        <li>Croquetas de queso de cabra y cebolla caramelizada</li>
+                        <li>Croquetas caseras de secreto barbacoa</li>
+                    </ul>
+
+                    <h4>Arroces y principales</h4>
+
+                    <ul>
+                        <li>Fideuà</li>
+                        <li>Rossejat (fideuà negra)</li>
+                        <li>Arroz a banda</li>
+                        <li>Arroz negro</li>
+                        <li>Arroz del senyoret (+5 € por ración)</li>
+                        <li>Arroz de bacalao y trigueros</li>
+                        <li>Arroz de pulpo y trigueros (+4 € por ración)</li>
+                        <li><strong>Arroz de carabinero</strong> (+10 € por ración)</li>
+                        <li>Arroz meloso marinero</li>
+                        <li>Arroz de pato, setas y alcachofas</li>
+                        <li>Arroz meloso de pato, setas y alcachofas</li>
+                        <li>Arroz de secreto, boletus y garbanzos</li>
+                        <li>Salmón al horno con verduritas y parmesano</li>
+                        <li>Emperador a la plancha con salsa meri</li>
+                        <li>Costillar de cerdo con salsa de miel y romero</li>
+                        <li>Solomillo de cerdo a la plancha con guarnición</li>
+                    </ul>
+
+                    <h4>Postres</h4>
+
+                    <ul>
+                        <li>Panna cotta de café casera</li>
+                        <li>Chocolate en texturas casero</li>
+                        <li>Textura de Lotus casera</li>
+                        <li>Vasito de banoffee casero</li>
+                        <li>Natillas caseras con galleta María</li>
+                        <li>Mousse de mango con frutos rojos casero</li>
+                        <li>Milhojas de pistacho y galleta casero</li>
+                        <li>Fruta natural</li>
+                    </ul>
+
+                    <p class="menu-includes">
+                        Incluye pan, postre y café.
+                    </p>
+
+                    <p class="menu-note">
+                        Arroces para un mínimo de dos personas.
+                        Máximo dos tipos de arroz y un meloso por mesa.
+                    </p>
+
+                    <p class="menu-note">
+                        Servicio extra de cubiertos y plato: 5 €.
+                    </p>
+
+                </details>
+
+            </article>
+
+        </section>
+
+    </div>
+
+    <p id="emptyResults" class="empty-state" hidden>
+        No se han encontrado resultados.
+    </p>
+
+    <p class="menu-disclaimer">
+        Prototipo no oficial. Precios, disponibilidad y condiciones
+        pendientes de confirmación por el restaurante.
+    </p>
+
+</section>
+
+<!-- RESERVAS -->
+
+<section class="reservation-banner">
+
+    <div class="reservation-content">
+
+        <span class="eyebrow">MOMENTOS PARA COMPARTIR</span>
+
+        <h2>Tu próxima experiencia empieza aquí.</h2>
+
+        <p>Descubre Gastrobar Gato Negro en Bétera.</p>
+
+        <a href="index.html#reservas" class="reserve-button">
+            Reservar mesa
+        </a>
+
+        <p class="menu-note">
+            Reservas online en modo demostración.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- INFORMACIÓN DE ALÉRGENOS -->
+
+<dialog id="allergenModal" class="allergen-modal">
+
+    <div class="modal-header">
+
+        <h2>Alérgenos e intolerancias</h2>
+
+        <form method="dialog">
+            <button class="close-modal" aria-label="Cerrar">×</button>
+        </form>
+
+    </div>
+
+    <p>
+        Cualquier alergia o intolerancia alimentaria debe ser
+        comunicada al personal del restaurante.
+    </p>
+
+    <p>
+        La información específica de cada plato está pendiente
+        de confirmación por el establecimiento.
+    </p>
+
+    <form method="dialog">
+        <button class="modal-confirm">Cerrar información</button>
+    </form>
+
+</dialog>
+
+<!-- PIE DE PÁGINA -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        <h2>GATO NEGRO</h2>
+        <p>Gastrobar · Bétera · Valencia</p>
+    </div>
+
+    <nav aria-label="Navegación del pie de página">
+
+        <a href="index.html">Inicio</a>
+        <a href="#carta">Carta</a>
+        <a href="#menus">Menús</a>
+        <a href="index.html#reservas">Reservas</a>
+        <a href="index.html#contacto">Contacto</a><a href="https://www.instagram.com/gatonegro_gastrobar/?hl=es" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+
+    </nav>
+
+    <div class="footer-bottom">
+        <p>Gastrobar Gato Negro · 2026</p>
+        <small>Prototipo de demostración no oficial.</small>
+    </div>
+
+</footer>
+
+<button id="scrollTop"
+        class="scroll-top"
+        aria-label="Volver arriba"
+        hidden>↑</button>
+
+</body>
+</html>

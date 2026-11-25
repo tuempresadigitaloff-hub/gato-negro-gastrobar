@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Gato Negro | Recuperación de acceso</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="recovery.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer src="recovery.js"></script>
+</head>
+<body class="recovery-page">
+<main class="recovery-card">
+  <p class="recovery-brand">GATO <span>NEGRO</span></p>
+  <small>Soporte técnico · Área privada</small>
+  <h1>Recuperar acceso</h1>
+  <p id="recoveryStatus" role="status" aria-live="polite">Verificando el enlace de recuperación…</p>
+  <form id="recoveryForm" hidden>
+    <p>Establece una nueva contraseña de al menos 12 caracteres.</p>
+    <label>Nueva contraseña<input id="recoveryPassword" type="password" autocomplete="new-password" minlength="12" maxlength="128" required></label>
+    <label>Confirmar contraseña<input id="recoveryConfirm" type="password" autocomplete="new-password" minlength="12" maxlength="128" required></label>
+    <button type="submit">Guardar nueva contraseña</button>
+  </form>
+  <button id="recoveryCancel" class="outline" type="button" hidden>Cancelar y cerrar sesión</button>
+  <a id="recoveryBack" class="outline" href="index.html" hidden>Volver a la web</a>
+</main>
+</body>
+</html>
